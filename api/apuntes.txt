@@ -1,0 +1,57 @@
+Estructura BD 
+
+{
+      name(string)
+      description(string)
+      plataform(array ['xbox','epicgames'])
+      image(string url)
+      fechaLanzamiento(DATEONLY , ejm : 2023-07-28)
+      raing(decimal) 
+}
+
+
+
+
+ {
+          id : videogame ID
+          name : videogame.name
+          plataform
+          image: videogame.background_image
+          fechaLanzamiento: videogame.released
+          rating: videogame.rating
+          genres: videogame.genres.map(genre) => genre.name
+          short_screenshots: videogame.short_screenshots.map(img)=> img.image
+          origen: 'API',
+};
+
+
+
+
+
+
+
+
+FORMATO PETICION POST :
+
+{
+  "name": "Prueb1",
+  "description": "Juego de prueba para testear",
+  "plataform": ["xbox", "epicgames"],
+  "image": "https://www.callofduty.com/content/dam/atvi/callofduty/legacy/blackops3/landing-digital/bo3-landig-bo3-boxart.jpg",
+  "releaseDate": "2023-07-28",
+  "rating": 4.5,
+  "genres": ["action", "indie"]
+}
+
+FORMATO PETICION PUT :
+
+const updatedData = {
+  name: 'Nuevo nombre del videojuego',
+  description: 'Nueva descripción del videojuego',
+  plataform: ['Plataforma 1', 'Plataforma 2'],
+  image: 'https://ejemplo.com/nueva-imagen.png',
+  fechaLanzamiento: '2023-07-30',
+  rating: 4.8,
+  genres: ['Género 1', 'Género 2'],
+};
+ 

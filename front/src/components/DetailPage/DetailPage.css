@@ -1,0 +1,331 @@
+body, html, #root {
+    height: 500vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+.details-principal-container {
+    margin: 0;
+    padding: 0;
+    background-color: #17222c;
+    width: 100%;
+    height: 100%;
+}
+
+.homepage-navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Para centrar verticalmente si es necesario */
+    position: relative;
+    z-index: 99;
+  }
+
+  .homepage-navbar-container h1 {
+    margin-right: auto;
+    margin-left: 50px;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(185, 185, 185);
+    text-decoration: none;
+  }
+  
+  .homepage-navbar-container h3 {
+    margin-right: 300px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(185, 185, 185);
+  }
+
+  
+.homepage-barleft-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 170px; /* Ancho de la barra lateral */
+    max-width: 170px;
+    background-color: #17222c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1;
+  }
+
+  .barleft-button {
+    position: relative;
+    margin-top: 150px;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    color: rgb(139, 139, 139);
+    transition: color 0.3s;
+  }
+
+  .barleft-button:hover {
+    color: white;
+  }
+  
+
+
+
+.details-container {
+    height: 100vh;
+    display: flex;
+    align-items: flex-start; /* Alinear los elementos en la parte superior */
+    justify-content: space-around; /* Espacio entre los elementos */
+    position: relative;
+    left: 50px;
+    background-color: #12181f;
+    color: white;
+    box-shadow: inset 0px 10px 30px -4px rgba(0, 0, 0, 0.999);
+    margin-left: 130px;
+    overflow-y: auto
+  }
+  
+  .details-stats-container {
+    display: flex;
+    flex-direction: row-reverse; /* Invertir el orden de los elementos */
+    align-items: flex-start; /* Alinear los elementos en la parte superior */
+    width: 100%; /* Opcional: asegurarse de que el contenedor ocupe todo el ancho disponible */
+  }
+
+
+  .details-game {
+    margin-top: 50px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.details-game img {
+    width: 80%;
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 30px;
+    border-bottom: 3px solid rgba(128, 128, 128, 0.151);
+}
+
+.details-game p {
+    color:  rgb(191, 191, 191);
+    padding-bottom: 120px;
+}
+
+.details-game h2 {
+    color: rgb(236, 233, 233);
+}
+
+.details-game h2 span {
+    border-bottom: 3px solid rgba(128, 128, 128, 0.151);
+    padding: 10px;
+}
+
+.stats-content {
+    
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-right: 100px;
+    color:  rgb(166, 166, 166);
+    background-color: #121b22;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+}
+
+.stats-game {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.151);
+  }
+  
+.stats-game p {
+    margin-left: 20px;
+  }
+
+.buttons {
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.buttons button {
+    background: rgba(128, 128, 128, 0.122);
+    border: none;
+    cursor: pointer;
+    color: rgb(139, 139, 139);
+    transition: color 0.3s;
+    border-radius: 10px;
+}
+
+.buttons button:hover {
+   color: white;
+}
+
+.platform-content {
+  word-wrap: break-word; /* Romper palabras en líneas si es necesario */
+  overflow-wrap: break-word; /* Asegurar un ajuste adecuado del contenido */
+  max-height: 4em; /* Limitar la altura del contenido */
+  overflow: hidden; /* Ocultar el contenido sobrante */
+}
+
+.link-no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para el contenedor del modal */
+.modal-form-container {
+  position: fixed;
+  top: 10%; /* Ajusta la distancia desde arriba según tus necesidades */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 500px;
+  max-height: 80%; /* Limita la altura del modal para que quepa en la pantalla */
+  background-color: #12181f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Habilita el scroll solo para el formulario */
+  z-index: 1000;
+}
+
+/* Personaliza la barra de desplazamiento */
+.modal-form-container::-webkit-scrollbar {
+  width: 5px; /* Ancho de la barra de desplazamiento */
+}
+
+.modal-form-container::-webkit-scrollbar-thumb {
+  background-color: #2e2e2efb; /* Color de la barra */
+  border-radius: 5px; /* Borde redondeado */
+}
+
+.modal-form-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Fondo transparente */
+}
+
+/* Estilos para el formulario */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.modal-form label {
+  color: rgb(175, 174, 174);
+}
+
+.modal-form input {
+  margin-left: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #63bbcb89;
+  outline: none;
+  color: rgb(240, 240, 240);
+  padding: 20px;
+  padding-left: 30px;
+  font-size: 15px;
+}
+
+.modal-form textarea {
+  margin-left: 30px;
+  width: 300px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 20px;
+  padding-left: 30px;
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid #63bbcb89;
+}
+
+.form-input {
+  width: 350px;
+}
+
+/* Estilos para los botones de plataformas y géneros */
+.form-btn-plataformas,
+.form-btn-generos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.form-btn-plataformas button,
+.form-btn-generos button {
+  border: 2px solid #63bbcb83;
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #fff;
+  width: auto;
+  height: 45px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.form-btn-plataformas button.active,
+.form-btn-generos button.active {
+  background-color: #2b5c91;
+  color: white;
+}
+
+/* Estilos para los botones "ENVIAR" y "Cancelar" */
+.form-div-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-div-btn button {
+  padding: 8px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-left {
+  background-color: #194e86;
+  color: white;
+}
+
+.btn-left:hover {
+  background-color: #194e8697;
+  color: white;
+}
+
+.btn-right {
+  background-color: #942833;
+  color: white;
+}
+
+.btn-right:hover{
+  background-color: #942833a0;
+  color: white;
+}

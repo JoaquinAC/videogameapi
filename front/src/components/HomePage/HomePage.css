@@ -1,0 +1,200 @@
+body, html, #root {
+  height: 500vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.homepage-container {
+  margin: 0;
+  padding: 0;
+  background-color: #17222c;
+  width: 100%;
+  height: 100%;
+
+}
+
+.homepage-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Para centrar verticalmente si es necesario */
+  position: relative;
+  z-index: 99;
+}
+
+.homepage-navbar-container h1 {
+  margin-right: auto;
+  margin-left: 50px;
+  margin-top: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(185, 185, 185);
+}
+
+.homepage-navbar-container input {
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 0px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #626161;
+  outline: none; /* Quitar el contorno al hacer clic */
+  color: rgb(226, 223, 223);
+}
+
+.homepage-navbar-container input:hover {
+  border-bottom: 2px solid #c4c3c3;
+}
+
+
+
+.homepage-navbar-container h3 {
+  margin-right: auto;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(185, 185, 185);
+}
+
+.homepage-barleft-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 170px; /* Ancho de la barra lateral */
+  background-color: #17222c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+.barleft-button {
+  position: relative;
+  margin-top: 150px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  color: rgb(139, 139, 139);
+  transition: color 0.3s;
+}
+
+.barleft-button:hover {
+  color: white;
+}
+
+
+.homepage-games-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Para alinear los selects horizontalmente */
+  margin-bottom: 20px;
+}
+
+.homepage-games-nav-container select {
+  text-align: center;
+  margin-right: 30px;
+  margin-top: 30px;
+  width: 130px;
+  background-color: transparent;
+  color: rgb(167, 166, 166);
+  border: none; 
+    /* Cambiar el color de fondo del menú desplegable */
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #293c4d00;
+    /* Redondear los bordes inferiores */  
+}
+.homepage-games-nav-container select:hover {
+  box-shadow: 2px 4px 6px 0 rgba(0.9, 0.9, 0.9, 0.9);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.homepage-games-nav-container select option {
+  background-color: #17222c;
+  color: rgb(181, 181, 181);
+  border: none;
+}
+
+
+
+.game-list-buttons {
+  margin-top: 30px;
+}
+
+.game-list-buttons button {
+  margin-right: 3px;
+  border-radius: 10px;
+  color: rgb(175, 171, 171);
+  background-color: #12181f;
+  border: none;
+}
+.game-list-buttons button:hover{
+  transform: scale(1.4);
+}
+
+
+.game-list button {
+  box-shadow: none;
+  border-radius: none;
+  width: auto;
+}
+
+.game-list button:hover {
+  background-color: transparent;
+}
+
+
+
+.homepage-navbar-container {
+  /* ... otros estilos ... */
+  margin-bottom: 5px; /* Agregar margen inferior para dejar espacio para game-list */
+}
+
+.homepage-barleft-container {
+  /* ... otros estilos ... */
+  margin-left: 0; /* Eliminar el margen izquierdo para que game-list ocupe ese espacio */
+}
+
+.game-list {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex: 1;
+  margin-left: 100px; /* Dejar espacio para homepage-barleft-container */
+  margin-right:100px; /* Dejar un margen a la derecha */
+  background-color: #12181f;
+  box-shadow: inset 0px 10px 30px -4px rgba(0, 0, 0, 0.999);
+}
+
+.cards-container {
+  margin-top: 40px;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  flex: 1;
+  margin-left: 200px; /* Dejar espacio para homepage-barleft-container */
+  margin-right: 200px; /* Dejar un margen a la derecha */
+  overflow: auto;
+}
+
+/* Personaliza la barra de desplazamiento */
+.cards-container::-webkit-scrollbar {
+  width: 5px; /* Ancho de la barra de desplazamiento */
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background-color: #2e2e2efb; /* Color de la barra */
+  border-radius: 5px; /* Borde redondeado */
+}
+
+.cards-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Fondo transparente */
+}
